@@ -1,0 +1,35 @@
+Value CCP_VS_MCP_SEC (\d+.\d)
+Value CCP_VS_MCP_MIN (\d+.\d)
+Value CCP_VS_MCP_MNS (\d+.\d)
+Value CPU_EXTU_SEC (\d+.\d)
+Value CPU_EXTU_MIN (\d+.\d)
+Value CPU_EXTU_MNS (\d+.\d)
+Value CPU_TOTAL_SEC (\d+.\d)
+Value CPU_TOTAL_MIN (\d+.\d)
+Value CPU_TOTAL_MNS (\d+.\d)
+Value List CPU_NUMBER (\d+)
+Value List CPU_TU_SEC (\d+\.\d)
+Value List CPU_DU_SEC (\d+\.\d)
+Value List CPU_CU_SEC (\d+\.\d)
+Value List CPU_TU_MIN (\d+\.\d)
+Value List CPU_DU_MIN (\d+\.\d)
+Value List CPU_CU_MIN (\d+\.\d)
+Value List CPU_TU_MNS (\d+\.\d)
+Value List CPU_DU_MNS (\d+\.\d)
+Value List CPU_CU_MNS (\d+\.\d)
+
+Start
+  ^Core\s+\d\s+sec\s+\d\s+min\s+\d\s+min\s*$$
+  ^Core\s+${CPU_NUMBER}\s+${CPU_TU_SEC}\s+\(${CPU_DU_SEC}\s\+\s${CPU_CU_SEC}\)\s+${CPU_TU_MIN}\s+\(${CPU_DU_MIN}\s\+\s${CPU_CU_MIN}\)\s+${CPU_TU_MNS}\s+\(${CPU_DU_MNS}\s\+\s${CPU_CU_MNS}\)
+  ^Current\s+control\s+point\s+elapsed\s+versus\s+the\s+maximum\s+control\s+point\s+elapsed\s+for: -> ControlPoint
+  ^CPU\s+utilization\s+of\s+external\s+processes\s+for: -> ExternalUtilization
+  ^Total\s+CPU\s+utilization\s+for: -> TotalUtilization
+
+ControlPoint
+  ^\s+\d\s+seconds\s+=\s+${CCP_VS_MCP_SEC}%;\s+\d\s+minute\:\s+${CCP_VS_MCP_MIN}%;\s+\d\s+minutes\:\s+${CCP_VS_MCP_MNS}% -> Start
+
+ExternalUtilization
+  ^\s+\d\s+seconds\s+=\s+${CPU_EXTU_SEC}%;\s+\d\s+minute\:\s+${CPU_EXTU_MIN}%;\s+\d\s+minutes\:\s+${CPU_EXTU_MNS}% -> Start
+  
+TotalUtilization
+  ^\s+\d\s+seconds\s+=\s+${CPU_TOTAL_SEC}%;\s+\d\s+minute\:\s+${CPU_TOTAL_MIN}%;\s+\d\s+minutes\:\s+${CPU_TOTAL_MNS}% -> Start
