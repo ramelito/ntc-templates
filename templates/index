@@ -117,7 +117,9 @@ cisco_asa_show_object-group_network.textfsm, .*, cisco_asa, sh[[ow]] (?:ru[[nnin
 cisco_asa_show_running-config_ipsec.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
 cisco_asa_show_interface_detail.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
 cisco_asa_show_crypto_ipsec_sa.textfsm, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
+cisco_asa_show_asp_event_dp-cp.textfsm, .*, cisco_asa, sh[[ow]] asp ev[[ent]] dp[[-cp]]
 cisco_asa_show_resource_usage.textfsm, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
+cisco_asa_show_cpu_detailed.textfsm, .*, cisco_asa, sh[[ow]] cpu det[[ailed]]
 cisco_asa_show_access-list.textfsm, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
 cisco_asa_show_license_all.textfsm, .*, cisco_asa, (?:fa[[ilover]]\s+e[[xec]]\s+)?sh[[ow]] lic[[ense]] a[[ll]]
 cisco_asa_show_interface.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]]
@@ -132,7 +134,6 @@ cisco_asa_show_name.textfsm, .*, cisco_asa, sh[[ow]] nam[[e]]
 cisco_asa_show_arp.textfsm, .*, cisco_asa, sh[[ow]] arp
 cisco_asa_show_nat.textfsm, .*, cisco_asa, sh[[ow]] nat
 cisco_asa_dir.textfsm, .*, cisco_asa, dir
-cisco_asa_show_cpu_detailed.textfsm, .*, cisco_asa, sh[[ow]] sh[[ow]] cpu det[[ailed]]
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]

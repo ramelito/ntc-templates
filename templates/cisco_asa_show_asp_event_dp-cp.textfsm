@@ -1,0 +1,17 @@
+Value List DP_CP_EVENT_QUEUE (\S+\s\S+\s\S+\s?\S+)
+Value List QUEUE_LEN (\d+)
+Value List HIGH_WATER (\d+)
+Value List EVENT_TYPE (\S+)
+Value List ALLOC (\d+)
+Value List ALLOC_FAIL (\d+)
+Value List ENQUEUED (\d+)
+Value List ENQ_FAIL (\d+)
+Value List RETIRED (\d+)
+Value List SEC15_RATE (\d+)
+
+Start
+  ^DP\-CP\s+EVENT\s+QUEUE\s+QUEUE\-LEN\s+HIGH\-WATER
+  ^${DP_CP_EVENT_QUEUE}\s+${QUEUE_LEN}\s+${HIGH_WATER}
+  ^$$
+  ^EVENT-TYPE\s+ALLOC\s+ALLOC-FAIL\s+ENQUEUED\s+ENQ-FAIL\s+RETIRED\s+15SEC-RATE
+  ^\s?\s?${EVENT_TYPE}\s+${ALLOC}\s+${ALLOC_FAIL}\s+${ENQUEUED}\s+${ENQ_FAIL}\s+${RETIRED}\s+${SEC15_RATE}
