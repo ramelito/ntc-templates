@@ -20,7 +20,7 @@ Value List CPU_CU_MNS (\d+\.\d)
 
 Start
   ^Core\s+\d\s+sec\s+\d\s+min\s+\d\s+min\s*$$
-  ^Core\s+${CPU_NUMBER}\s+${CPU_TU_SEC}\s+\(${CPU_DU_SEC}\s\+\s${CPU_CU_SEC}\)\s+${CPU_TU_MIN}\s+\(${CPU_DU_MIN}\s\+\s${CPU_CU_MIN}\)\s+${CPU_TU_MNS}\s+\(${CPU_DU_MNS}\s\+\s${CPU_CU_MNS}\)
+  ^Core\s+${CPU_NUMBER}\s+${CPU_TU_SEC}\s+\(${CPU_DU_SEC}\s+\+\s+${CPU_CU_SEC}\)\s+${CPU_TU_MIN}\s+\(${CPU_DU_MIN}\s+\+\s+${CPU_CU_MIN}\)\s+${CPU_TU_MNS}\s+\(${CPU_DU_MNS}\s+\+\s+${CPU_CU_MNS}\)
   ^Current\s+control\s+point\s+elapsed\s+versus\s+the\s+maximum\s+control\s+point\s+elapsed\s+for: -> ControlPoint
   ^CPU\s+utilization\s+of\s+external\s+processes\s+for: -> ExternalUtilization
   ^Total\s+CPU\s+utilization\s+for: -> TotalUtilization

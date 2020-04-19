@@ -17,6 +17,8 @@ Value FLOW_DROP_CTM_CRYPTO_REQUEST_ERROR (\d+)
 Value FLOW_DROP_VPN_HANDLE_NOT_FOUND (\d+)
 Value FLOW_DROP_NP_SOCKET_DATA_MOVE_FAILURE (\d+)
 Value FLOW_DROP_DTLS_HELLO_CLOSE (\d+)
+Value FLOW_DROP_TUNNEL_TORN_DOWN (\d+)
+Value FLOW_DROP_NEED_IKE (\d+)
 Value FLOW_LAST_CLEARED (.+?)
 Value ACL_DROP (\d+)
 Value ASYNC_LOCK_QUEUE_LIMIT (\d+)
@@ -41,6 +43,7 @@ Value FO_STANDBY (\d+)
 Value FRAGMENT_REASSEMBLY_FAILED (\d+)
 Value HOST_LIMIT (\d+)
 Value IFC_CLASSIFY (\d+)
+Value IKE_SA_RATE_LIMIT (\d+)
 Value INSPECT_DNS_ID_NOT_MATCHED (\d+)
 Value INSPECT_DNS_INVALID_DOMAIN_LABEL (\d+)
 Value INSPECT_DNS_INVALID_PAK (\d+)
@@ -59,11 +62,13 @@ Value INVALID_IP_OPTION (\d+)
 Value INVALID_TCP_HDR_LENGTH (\d+)
 Value INVALID_UDP_LENGTH (\d+)
 Value IPSEC_TUN_DOWN (\d+)
+Value IPSEC_SPOOF (\d+)
 Value L2_ACL (\d+)
 Value LAST_CLEARED (.+?)
 Value LU_INVALID_PKT (\d+)
 Value MCAST_IN_NONACTIVE_DEVICE (\d+)
 Value MP_SVC_BAD_LENGTH (\d+)
+Value MP_SVC_BAD_FRAMING (\d+)
 Value MP_SVC_FLOW_CONTROL (\d+)
 Value MP_SVC_NO_CHANNEL (\d+)
 Value MP_SVC_NO_FRAGMENT (\d+)
@@ -110,10 +115,12 @@ Value TCP_RSTFIN_OOO (\d+)
 Value TCP_SEQ_PAST_WIN (\d+)
 Value TCP_SEQ_SYN_DIFF (\d+)
 Value TCP_SYNACK_OOO (\d+)
+Value TCP_SYNACK_DATA (\d+)
 Value TTL_EXCEEDED (\d+)
 Value UNABLE_TO_ADD_FLOW (\d+)
 Value UNABLE_TO_CREATE_FLOW (\d+)
 Value UNSUPPORTED_IP_VERSION (\d+)
+Value VPN_RECLASSIFY_FAILED (\d+)
 
 Start
   ^Frame\s+drop:
@@ -143,6 +150,7 @@ Start
   ^.+fragment-reassembly-failed\)\s+${FRAGMENT_REASSEMBLY_FAILED}
   ^.+host-limit\)\s+${HOST_LIMIT}
   ^.+ifc-classify\)\s+${IFC_CLASSIFY}
+  ^.+ike-sa-rate-limit\)\s+${IKE_SA_RATE_LIMIT}
   ^.+inspect-dns-id-not-matched\)\s+${INSPECT_DNS_ID_NOT_MATCHED}
   ^.+inspect-dns-invalid-domain-label\)\s+${INSPECT_DNS_INVALID_DOMAIN_LABEL}
   ^.+inspect-dns-invalid-pak\)\s+${INSPECT_DNS_INVALID_PAK}
@@ -161,10 +169,12 @@ Start
   ^.+invalid-tcp-hdr-length\)\s+${INVALID_TCP_HDR_LENGTH}
   ^.+invalid-udp-length\)\s+${INVALID_UDP_LENGTH}
   ^.+ipsec-tun-down\)\s+${IPSEC_TUN_DOWN}
+  ^.+ipsec-spoof\)\s+${IPSEC_SPOOF}
   ^.+l2_acl\)\s+${L2_ACL}
   ^.+lu-invalid-pkt\)\s+${LU_INVALID_PKT}
   ^.+mcast-in-nonactive-device\)\s+${MCAST_IN_NONACTIVE_DEVICE}
   ^.+mp-svc-bad-length\)\s+${MP_SVC_BAD_LENGTH}
+  ^.+mp-svc-bad-framing\)\s+${MP_SVC_BAD_FRAMING}
   ^.+mp-svc-flow-control\)\s+${MP_SVC_FLOW_CONTROL}
   ^.+mp-svc-no-channel\)\s+${MP_SVC_NO_CHANNEL}
   ^.+mp-svc-no-fragment\)\s+${MP_SVC_NO_FRAGMENT}
@@ -211,10 +221,12 @@ Start
   ^.+tcp-seq-past-win\)\s+${TCP_SEQ_PAST_WIN}
   ^.+tcp-seq-syn-diff\)\s+${TCP_SEQ_SYN_DIFF}
   ^.+tcp-synack-ooo\)\s+${TCP_SYNACK_OOO}
+  ^.+tcp-synack-data\)\s+${TCP_SYNACK_DATA}
   ^.+ttl-exceeded\)\s+${TTL_EXCEEDED}
   ^.+unable-to-add-flow\)\s+${UNABLE_TO_ADD_FLOW}
   ^.+unable-to-create-flow\)\s+${UNABLE_TO_CREATE_FLOW}
   ^.+unsupported-ip-version\)\s+${UNSUPPORTED_IP_VERSION}
+  ^.+vpn-reclassify-failed\)\s+${VPN_RECLASSIFY_FAILED}
   ^Flow\s+drop: -> FLOW
   ^.* -> Error "LINE NOT FOUND"
 
@@ -241,4 +253,6 @@ FLOW
   ^.+vpn-handle-not-found\)\s+${FLOW_DROP_VPN_HANDLE_NOT_FOUND}
   ^.+np-socket-data-move-failure\)\s+${FLOW_DROP_NP_SOCKET_DATA_MOVE_FAILURE}
   ^.+dtls-hello-close\)\s+${FLOW_DROP_DTLS_HELLO_CLOSE}
+  ^.+tunnel-torn-down\)\s+${FLOW_DROP_TUNNEL_TORN_DOWN}
+  ^.+need-ike\)\s+${FLOW_DROP_NEED_IKE}
   ^.* -> Error "LINE NOT FOUND"

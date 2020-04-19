@@ -117,7 +117,7 @@ cisco_asa_show_object-group_network.textfsm, .*, cisco_asa, sh[[ow]] (?:ru[[nnin
 cisco_asa_show_running-config_ipsec.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
 cisco_asa_show_interface_detail.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
 cisco_asa_show_crypto_ipsec_sa.textfsm, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
-cisco_asa_show_asp_event_dp-cp.textfsm, .*, cisco_asa, sh[[ow]] asp ev[[ent]] dp[[-cp]]
+cisco_asa_show_asp_event_dp-cp.textfsm, .*, cisco_asa, sh[[ow]] asp event dp-cp
 cisco_asa_show_resource_usage.textfsm, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
 cisco_asa_show_cpu_detailed.textfsm, .*, cisco_asa, sh[[ow]] cpu det[[ailed]]
 cisco_asa_show_access-list.textfsm, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
