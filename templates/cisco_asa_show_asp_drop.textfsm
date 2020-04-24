@@ -121,6 +121,7 @@ Value UNABLE_TO_ADD_FLOW (\d+)
 Value UNABLE_TO_CREATE_FLOW (\d+)
 Value UNSUPPORTED_IP_VERSION (\d+)
 Value VPN_RECLASSIFY_FAILED (\d+)
+Value TUN_PENDING (\d+)
 
 Start
   ^Frame\s+drop:
@@ -223,6 +224,7 @@ Start
   ^.+tcp-synack-ooo\)\s+${TCP_SYNACK_OOO}
   ^.+tcp-synack-data\)\s+${TCP_SYNACK_DATA}
   ^.+ttl-exceeded\)\s+${TTL_EXCEEDED}
+  ^.+tunnel-pending\)\s+${TUN_PENDING}
   ^.+unable-to-add-flow\)\s+${UNABLE_TO_ADD_FLOW}
   ^.+unable-to-create-flow\)\s+${UNABLE_TO_CREATE_FLOW}
   ^.+unsupported-ip-version\)\s+${UNSUPPORTED_IP_VERSION}
