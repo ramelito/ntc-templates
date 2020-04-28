@@ -84,6 +84,7 @@ Value NO_ROUTE (\d+)
 Value NP_SOCKET_CLOSED (\d+)
 Value NP_SOCKET_LOCK_FAILURE (\d+)
 Value NP_SP_INVALID_SPI (\d+)
+Value NP_SOCKET_NEW_CONN_FAILURE (\d+)
 Value OBJECT_GROUP_SEARCH_THRESHOLD_EXCEEDED (\d+)
 Value PUNT_QUEUE_LIMIT (\d+)
 Value PUNT_LIMIT (\d+)
@@ -190,6 +191,7 @@ Start
   ^.+np-socket-closed\)\s+${NP_SOCKET_CLOSED}
   ^.+np-socket-lock-failu\s+${NP_SOCKET_LOCK_FAILURE}
   ^.+np-sp-invalid-spi\)\s+${NP_SP_INVALID_SPI}
+  ^.+np-socket-new-conn-failure\)\s+${NP_SOCKET_NEW_CONN_FAILURE}
   ^.+object-group-search-threshold-exceeded\)\s+${OBJECT_GROUP_SEARCH_THRESHOLD_EXCEEDED}
   ^.+punt-queue-limit\)\s+${PUNT_QUEUE_LIMIT}
   ^.+punt-limit\)\s+${PUNT_LIMIT}
