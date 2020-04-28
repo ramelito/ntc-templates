@@ -116,7 +116,7 @@ Value FLOW_SVC_SELECTOR_FAILURE (\d+)
 Value FLOW_VPATH_LICENSE_FAILURE (\d+)
 Value FLOW_SVC_CONN_TIMER_CB_FAIL (\d+)
 Value FLOW_SVC_UDP_CONN_TIMER_CB_FAIL (\d+)
-Value FLOW_NAT64/46_CONVERSION_FAIL (\d+)
+Value FLOW_NAT64_46_CONVERSION_FAIL (\d+)
 Value FLOW_CLUSTER_CFLOW_CLU_CLOSED (\d+)
 Value FLOW_CLUSTER_CFLOW_STALE_CLU_CLOSED (\d+)
 Value FLOW_CLUSTER_CFLOW_CLU_TIMEOUT (\d+)
@@ -1225,7 +1225,7 @@ FLOW
   ^.+vPath-license-failure\)\s+${FLOW_VPATH_LICENSE_FAILURE}
   ^.+svc-conn-timer-cb-fail\)\s+${FLOW_SVC_CONN_TIMER_CB_FAIL}
   ^.+svc-udp-conn-timer-cb-fail\)\s+${FLOW_SVC_UDP_CONN_TIMER_CB_FAIL}
-  ^.+nat64/46-conversion-fail\)\s+${FLOW_NAT64/46_CONVERSION_FAIL}
+  ^.+nat64/46-conversion-fail\)\s+${FLOW_NAT64_46_CONVERSION_FAIL}
   ^.+cluster-cflow-clu-closed\)\s+${FLOW_CLUSTER_CFLOW_CLU_CLOSED}
   ^.+cluster-cflow-stale-clu-closed\)\s+${FLOW_CLUSTER_CFLOW_STALE_CLU_CLOSED}
   ^.+cluster-cflow-clu-timeout\)\s+${FLOW_CLUSTER_CFLOW_CLU_TIMEOUT}
