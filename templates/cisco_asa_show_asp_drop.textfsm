@@ -976,7 +976,7 @@ Start
   ^.+inspect-scansafe-hdr-encryption-failed\)\s+${INSPECT_SCANSAFE_HDR_ENCRYPTION_FAILED}
   ^.+inspect-scansafe-max-conn-reached\)\s+${INSPECT_SCANSAFE_MAX_CONN_REACHED}
   ^.+inspect-scansafe-duplicate-conn\)\s+${INSPECT_SCANSAFE_DUPLICATE_CONN}
-  ^.+np-socket-lock-failure\)\s+${NP_SOCKET_LOCK_FAILURE}
+  ^.+np-socket-lock-failu\s+${NP_SOCKET_LOCK_FAILURE}
   ^.+mp-service-inject-failed\)\s+${MP_SERVICE_INJECT_FAILED}
   ^.+same-physical-interface\)\s+${SAME_PHYSICAL_INTERFACE}
   ^.+vPath-license-failure\)\s+${VPATH_LICENSE_FAILURE}
